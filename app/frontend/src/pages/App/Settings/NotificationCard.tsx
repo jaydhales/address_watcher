@@ -129,8 +129,7 @@ const NotificationCard = () => {
                 {email ? email : 'You do not have a registered email'}
               </p>
               <button
-                disabled
-                className="ml-2 rounded bg-cs-light-purple hover:bg-cs-purple text-cs-bg font-bold px-4 py-2 leading-none text-sm max-sm:ml-0 max-sm:mt-3.5 disabled:opacity-60"
+                className="ml-2 rounded bg-cs-light-purple hover:bg-cs-purple text-cs-bg font-bold px-4 py-2 leading-none text-sm max-sm:ml-0 max-sm:mt-3.5"
                 onClick={() =>
                   setIsEditing({
                     ...isEditing,
@@ -147,8 +146,9 @@ const NotificationCard = () => {
       </div>
       <div>
         <button
-          className="rounded bg-cs-light-purple hover:bg-cs-purple text-cs-bg font-bold px-4 py-2 leading-none text-sm"
+          className="rounded bg-cs-light-purple hover:bg-cs-purple text-cs-bg font-bold px-4 py-2 leading-none text-sm  disabled:opacity-60"
           onClick={handleRegisterPushNotification}
+          disabled
         >
           {pushEnabled ? 'Disable Push Notifications' : ' Enable Push Notifications'}
         </button>
